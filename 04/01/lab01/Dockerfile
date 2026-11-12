@@ -2,7 +2,8 @@
 
 FROM alpine:3.24
 
+COPY hello.txt /copy/dir/
 COPY message.txt /app/message.txt
-RUN wx -c /app/message.txt > /app/size.txt
+RUN wc -c /app/message.txt > /app/size.txt
 
-CMD [ "cat", "/app/message.txt", "/app/size.txt" ]`
+CMD ["cat", "/app/message.txt", "/app/size.txt"]

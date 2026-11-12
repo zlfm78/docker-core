@@ -1,0 +1,1 @@
+echo "Hello from lab01-app" > message.txt

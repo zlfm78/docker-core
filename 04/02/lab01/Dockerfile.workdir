@@ -1,0 +1,13 @@
+# syntax=docker/dockerfile:1
+
+FROM alpine:3.24
+
+WORKDIR /app
+
+COPY hello.txt ./
+
+WORKDIR src
+
+COPY hello.txt ./
+
+CMD [ "pwd" ]

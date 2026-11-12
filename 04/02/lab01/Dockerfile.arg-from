@@ -1,0 +1,9 @@
+# syntax=docker/dockerfile:1
+
+ARG ALPINE_VERSION=3.24
+
+FROM alpine:${ALPINE_VERSION}
+
+RUN echo "befor: [$ALPINE_VERSION]" > /alpine-version.txt
+
+CMD ["cat", "/etc/alpine-release"]

@@ -1,0 +1,9 @@
+# syntax=docker/dockerfile:1
+
+FROM alpine:3.24
+
+COPY --chmod=755 docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
+
+CMD ["echo", "opt2"]
